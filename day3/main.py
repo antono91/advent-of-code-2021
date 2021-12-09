@@ -1,5 +1,6 @@
-with open('input.txt') as f:
-    puzzle = [l.strip() for l in f]
+def get_input(file):
+    with open(file) as f:
+        return [l.strip() for l in f]
 
 def solve(puzzle):
     gamma = epsilon = ""
@@ -25,6 +26,6 @@ def solve2(puzzle):
 
     return int(oxygen[0], 2) *int(co2[0], 2)
 
-
+puzzle = get_input('input.txt')
 print(solve(puzzle))
 print(solve2(puzzle))
